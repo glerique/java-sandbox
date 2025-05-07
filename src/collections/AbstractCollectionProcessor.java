@@ -1,6 +1,6 @@
 package collections;
 
-public abstract class AbstractCollectionProcessor<T> implements CollectionProcessor<T> {
+public abstract class AbstractCollectionProcessor<T> implements ICollectionProcessor<T> {
 
     private final String type;
 

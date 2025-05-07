@@ -30,11 +30,11 @@ public class Main {
         processMap(new TreeMap<>(nameMap), new TreeMapProcessor<>());
     }
 
-    private static <T, C extends Collection<T>> void processCollection(C collection, CollectionProcessor<C> processor) {
+    private static <T, C extends Collection<T>> void processCollection(C collection, ICollectionProcessor<C> processor) {
         processor.process(collection);
     }
 
-    private static <K, V, M extends Map<K, V>> void processMap(M map, CollectionProcessor<M> processor) {
+    private static <K, V, M extends Map<K, V>> void processMap(M map, ICollectionProcessor<M> processor) {
         processor.process(map);
     }
 }

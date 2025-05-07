@@ -1,5 +1,5 @@
 package collections;
 
-public interface CollectionProcessor<T> {
+public interface ICollectionProcessor<T> {
     void process(T collection);
 }

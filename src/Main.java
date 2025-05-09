@@ -6,14 +6,16 @@ import collections.handler.CollectionHandler;
 import collections.handler.MapHandler;
 import java.util.List;
 import java.util.Map;
+import greeting.exception.SimpleExceptionHandler;
 
 public class Main {
     public static void main(String[] args) {
-        User user = new User("Gilbert");
+        User user = new User(null);
         Greeter greeter = new Greeter();
         MessagePrinter printer = new MessagePrinter();
+        SimpleExceptionHandler exceptionHandler = new SimpleExceptionHandler();
 
-        UserHandler userHandler = new UserHandler(greeter, printer);
+        UserHandler userHandler = new UserHandler(greeter, printer, exceptionHandler);
         userHandler.greetUser(user);
 
         List<String> names = List.of("Maurice", "Miguel", "Gilbert", "Fred");
